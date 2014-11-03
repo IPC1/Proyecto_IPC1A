@@ -260,7 +260,15 @@ public class Servicios extends JFrame implements ActionListener{
 						nl+"   Capacidad para 130 Personas");
 		}else if(e.getSource()==btnGimnasio){
 			lblHotelDeCentro.setText("Gimnasio");
-			textPane.setText("1. Bar ''Playa Fria''"+
+			textPane.setText("1. Gimnasio ''Excentric Body''"+
+						nl+"   Ubicado en medio de las dos torres."+
+						nl+"   Horaio: 5.00am-10.00pm, de lunes a domingo"+
+						nl+"   Precio de Entrada Q20.00."+
+						nl+"   Precio de Clases a partir de Q70.00"+
+						nl+"   Capacidad para 50 Personas");
+		}else if(e.getSource()==btnDiscoteca){
+			lblHotelDeCentro.setText("Discoteca");
+			textPane.setText("1. Discoteca ''Disokothek''"+
 						nl+"   Ubicado en medio de las dos torres."+
 						nl+"   Horaio: 5.00am-10.00pm, de lunes a domingo"+
 						nl+"   Precio de Entrada Q20.00."+

@@ -1,27 +1,40 @@
 package ReservacionHabitaciones;
 
 import java.util.Date;
+import Clientes.Clientes;
+import ReservacionHabitaciones.Lista;
 
 public class Nodo {
 
-	private String Nombre, TipoHabitacion, Referencia;
+	private String Nombre, TipoHabitacion, Referencia, edificio;
 	private Date FechaInicio, FechaFin;
-	private int NIT, NoReservacion, Torre, Modulo, Habitacion;
+	private int NIT, NoReservacion, NoEdificio, Habitacion,dias;
+	public Lista cola= new Lista();
+	public int getDias() {
+		return dias;
+	}
+
+	public void setDias(int dias) {
+		this.dias = dias;
+	}
+
 	private float monto;
 	
 	Nodo siguiente;
 	
-	public Nodo (int noReservacion, Date fechaInicio, Date fechaFin,String tipoHabitacion, int torre, int modulo, int habitacion, String nombre, 
+	public Nodo (int noReservacion, Date fechaInicio, Date fechaFin,int dias,String tipoHabitacion, String edifiio, int NoEdificio, int habitacion, String nombre, 
 			int nit,String referencia,Nodo s){
+		
 		NoReservacion=noReservacion;
 		Nombre=nombre;
 		TipoHabitacion=tipoHabitacion;
 		Referencia=referencia;
 		FechaInicio=fechaInicio;
 		FechaFin=fechaFin;
+		this.dias=dias;
 		NIT= nit;
-		Torre=torre;
-		Modulo=modulo;
+		this.edificio=edificio;
+		this.NoEdificio=NoEdificio;
 		Habitacion=habitacion;
 		if (TipoHabitacion=="Sencilla")
 			monto=200;
@@ -57,12 +70,28 @@ public class Nodo {
 		Referencia = referencia;
 	}
 
-	public Date getFecha() {
+	public String getEdificio() {
+		return edificio;
+	}
+
+	public void setEdificio(String edificio) {
+		this.edificio = edificio;
+	}
+
+	public Date getFechaInicio() {
 		return FechaInicio;
 	}
 
-	public void setFecha(Date fecha) {
-		FechaInicio = fecha;
+	public void setFechaInicio(Date fechaInicio) {
+		FechaInicio = fechaInicio;
+	}
+
+	public Date getFechaFin() {
+		return FechaFin;
+	}
+
+	public void setFechaFin(Date fechaFin) {
+		FechaFin = fechaFin;
 	}
 
 	public int getNIT() {
@@ -81,20 +110,12 @@ public class Nodo {
 		NoReservacion = noReservacion;
 	}
 
-	public int getTorre() {
-		return Torre;
+	public int getNoEdificio() {
+		return NoEdificio;
 	}
 
-	public void setTorre(int torre) {
-		Torre = torre;
-	}
-
-	public int getModulo() {
-		return Modulo;
-	}
-
-	public void setModulo(int modulo) {
-		Modulo = modulo;
+	public void setNoEdificio(int noEdificio) {
+		NoEdificio = noEdificio;
 	}
 
 	public int getHabitacion() {
@@ -105,8 +126,18 @@ public class Nodo {
 		Habitacion = habitacion;
 	}
 
+	public float getMonto() {
+		return monto;
+	}
+
+	public void setMonto(float monto) {
+		this.monto = monto;
+	}
+
 	public void setSiguiente(Nodo siguiente) {
 		this.siguiente = siguiente;
 	}
+
+	
 	
 }

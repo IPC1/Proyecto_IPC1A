@@ -4,17 +4,16 @@ import java.util.Date;
 
 public class Nodo {
 
-	private String Nombre, TipoHabitacion, Hotel;
+	private String TipoHabitacion, Hotel;
 	private Date FechaInicio, FechaFin;
 	private int NIT, Torre,nivel, Habitacion;
 	private float monto;
 	
 	Nodo siguiente;
 	
-	public Nodo (Date fechaInicio, Date fechaFin,String tipoHabitacion, int modulo, int habitacion, String nombre, 
+	public Nodo (Date fechaInicio, Date fechaFin,String tipoHabitacion, int modulo, int habitacion, 
 			int nit,int nivel,String referencia,Nodo s){
 
-		Nombre=nombre;
 		TipoHabitacion=tipoHabitacion;
 		Hotel=referencia;
 		FechaInicio=fechaInicio;
@@ -39,14 +38,6 @@ public class Nodo {
 
 	public void setNivel(int nivel) {
 		this.nivel = nivel;
-	}
-
-	public String getNombre() {
-		return Nombre;
-	}
-
-	public void setNombre(String nombre) {
-		Nombre = nombre;
 	}
 
 	public String getTipoHabitacion() {
